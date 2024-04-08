@@ -5,9 +5,11 @@
 
 # 步驟1
 用pandas套件去讀取uber_date.csv
+- 使用 .drop_duplicates() 函數刪除重複行。
+- 使用 .reset_index(drop=True) 參數表示刪除原始索引，並生成一個新的索引列。
+- 最後使用 .merge 將原有df表格 與 清洗過的表格進行merge ,可進行更多的分析和研究。
 
-
-#步驟2
+# 步驟2
 使用 lucidchart  建立表格ER圖 
 (https://www.lucidchart.com/pages/)
 ![image](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/8354e3fb-8375-4fba-925a-d33c32990923)
