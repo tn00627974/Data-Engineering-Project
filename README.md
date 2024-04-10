@@ -14,3 +14,6 @@
 (https://www.lucidchart.com/pages/)
 ![image](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/8354e3fb-8375-4fba-925a-d33c32990923)
 
+# 步驟3 
+使用 GCP Cloud Storage 上傳檔案csv檔,建立公開連結
+![[Frame 1.png]]
