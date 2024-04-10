@@ -16,4 +16,6 @@
 
 # 步驟3 
 使用 GCP Cloud Storage 上傳檔案csv檔,建立公開連結
-![[Frame 1.png]]
+![Frame 1](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/775766ee-be78-4daa-82cd-b6016153d056)
+![Frame 2](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/cddf25da-440b-477a-b2ca-22c29e841ab0)
+
