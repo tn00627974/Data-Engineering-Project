@@ -17,5 +17,9 @@
 # 步驟3 
 使用 GCP Cloud Storage 上傳檔案csv檔,建立公開連結
 ![Frame 1](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/775766ee-be78-4daa-82cd-b6016153d056)
-![Frame 2](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/cddf25da-440b-477a-b2ca-22c29e841ab0)
+架設GCP虛擬機VM  (建立Mega資料管道)
+![Frame 2](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/392f802d-be56-4571-841f-b2bf2a772cd9)
+
+也可參考Mega官方的Github
+https://github.com/mage-ai/mage-ai
 
