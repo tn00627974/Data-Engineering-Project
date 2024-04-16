@@ -16,12 +16,14 @@ def export_data_to_big_query(df: DataFrame, **kwargs) -> None:
 
     Docs: https://docs.mage.ai/design/data-loading#bigquery
     """
-    table_id = 'sincere-strata-419910.uber_dateset.fact_table'
     config_path = path.join(get_repo_path(), 'io_config.yaml')
     config_profile = 'default'
 
-    # BigQuery.with_config(ConfigFileLoader(config_path, config_profile)).export(
-    #     DataFrame(df['fact_table']),
-    #     table_id,
-    #     if_exists='replace',  # Specify resolution policy if table name already exists
-    # )
+    for key,value in data.items():
+        # print(key,value)
+        table_id = 'abiding-ascent-408115.uberdataset.{}'.format(key)  #分別是 GCP專案編號.bigquery資料集.<123=資料表名稱>
+        BigQuery.with_config(ConfigFileLoader(config_path, config_profile)).export(
+            DataFrame(value), 
+            table_id,
+            if_exists='replace',  # Specify resolution policy if table name already exists
+        )

@@ -21,6 +21,11 @@ def transform(df, *args, **kwargs):
         Anything (e.g. data frame, dictionary, array, int, str, etc.)
     """
     # Specify your transformation logic here
+    
+    df = df.drop_duplicates().reset_index(drop=True)
+    df['trip_id'] = df.index
+
+
     df['tpep_pickup_datetime'] = pd.to_datetime(df['tpep_pickup_datetime'])
     df['tpep_dropoff_datetime'] = pd.to_datetime(df['tpep_dropoff_datetime'])
 
@@ -85,18 +90,21 @@ def transform(df, *args, **kwargs):
     payment_type_dim['payment_type_name'] = payment_type_dim['payment_type'].map(payment_type_name)
     payment_type_dim = payment_type_dim[['payment_type_id','payment_type','payment_type_name']]
 
+    #把原有df表格 與 清洗過的表格進行merge ,可進行更多的分析和研究
+    #如果用df.merge(passenger_count_dim, left_on = 'trip_id',right_on='passenger_count') 會噴錯,要將left_on刪除
     fact_table = df.merge(passenger_count_dim, on='passenger_count') \
-             .merge(trip_distance_dim, on='trip_distance') \
-             .merge(rate_code_dim, on='RatecodeID') \
-             .merge(pickup_location_dim, on=['pickup_longitude', 'pickup_latitude']) \
-             .merge(dropoff_location_dim, on=['dropoff_longitude', 'dropoff_latitude'])\
-             .merge(datetime_dim, on=['tpep_pickup_datetime','tpep_dropoff_datetime']) \
-             .merge(payment_type_dim, on='payment_type') \
-             [['VendorID', 'datetime_id', 'passenger_count_id',
-               'trip_distance_id', 'rate_code_id', 'store_and_fwd_flag', 'pickup_location_id', 'dropoff_location_id',
-               'payment_type_id', 'fare_amount', 'extra', 'mta_tax', 'tip_amount', 'tolls_amount',
-               'improvement_surcharge', 'total_amount']]
-
+                .merge(trip_distance_dim, on='trip_distance') \
+                .merge(rate_code_dim, on='RatecodeID') \
+                .merge(pickup_location_dim, on=['pickup_longitude', 'pickup_latitude']) \
+                .merge(dropoff_location_dim, on=['dropoff_longitude', 'dropoff_latitude'])\
+                .merge(datetime_dim, on=['tpep_pickup_datetime','tpep_dropoff_datetime']) \
+                .merge(payment_type_dim, on='payment_type') \
+                [['trip_id','VendorID', 'datetime_id', 'passenger_count_id',
+                'trip_distance_id', 'rate_code_id', 'store_and_fwd_flag', 'pickup_location_id', 'dropoff_location_id',
+                'payment_type_id', 'fare_amount', 'extra', 'mta_tax', 'tip_amount', 'tolls_amount',
+                'improvement_surcharge', 'total_amount']] #fact_table欄位共18個
+                
+    # 將dim表格轉換成'序列化成字典'格式(一種結構化的方式儲存),是符合 BigQuery 要求的格式
     return {"datetime_dim":datetime_dim.to_dict(orient="dict"),
     "passenger_count_dim":passenger_count_dim.to_dict(orient="dict"),
     "trip_distance_dim":trip_distance_dim.to_dict(orient="dict"),
