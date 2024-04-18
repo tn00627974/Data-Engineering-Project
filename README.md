@@ -147,6 +147,7 @@ Mage 面板操作
 - 使用 Looker Studio 建立儀錶板 
 - 以距離分析票價及常用付款方式
 - 最後建立氣泡地圖,將數據可視化在google map上呈現
+- https://lookerstudio.google.com/reporting/b1ccee39-8719-4314-9ff4-01b8a9a2a4b4/page/p_mrrofv4hgd 
 
 
 # 專案遇到的問題 , 處理方式及解決的心得與新學習到的技術 
