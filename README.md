@@ -109,7 +109,7 @@ note: If you believe this is a mistake, please contact your Python installation 
 hint: See PEP 668 for the detailed specification.
 ```
 
-# 查看GCP所有安裝套件
+## 查看GCP所有安裝套件
 ```shell
 dpkg --get-selections
 ```
