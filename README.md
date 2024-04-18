@@ -115,66 +115,22 @@ dpkg --get-selections
 ```
 
 
-步驟 3
-# Mage.ai 防火牆規則設定
+# 步驟3 (可參考step_viewer的frame3)
+Mage.ai 防火牆規則設定
+- 虛擬私有雲網路 > 防火牆
+- 選 目標 > 網路中的所有執行個體 > 指定TCP 6789 port
+- 之後複製VM外部IP > 使用預覽器貼上 > 進入Mage.ai伺服器
 
-![[Frame 3.png]]
-
-
-
-
-
-步驟 4
-# Mage 面板操作
-
- 左側面板 > 選 Edit pipeline > 轉進GCP bigquery裡面,需要轉成dict字典格式 > 建立BigQuery資料表(進行分析與查詢)
- 
-
-Load
-Url 載入 Cloud Storage 上傳的CSV
-![[Pasted image 20240412200724.png]]
-
-Transformers  
-將dim表格轉換成'序列化成字典'格式(一種結構化的方式儲存),是符合 BigQuery 要求的格式
-![[Pasted image 20240412203748.png]]
-
-Exporter
-
-![[Pasted image 20240412204451.png]]
-
-
-![[Pasted image 20240418123718.png]]
-
-轉換字典格式
-![[Pasted image 20240416123444.png]]
-
+# 步驟 4 (可參考step_viewer的frame4)
+Mage 面板操作
+- 左側面板 > 選 Edit pipeline >
+- 載入 Cloud Storage 上傳的 CSV https://storage.googleapis.com/uber-dataset-0410/uber_data.csv
+- 轉換 Transformers >  
+- 萃取 Extract > GCP bigquery裡面 (需先開通gcp 憑證才能萃取)
 
 # 開通GCP 憑證KEY
-
-![[Pasted image 20240412204826.png]]
-
-
-![[Pasted image 20240412205127.png]]
-
-
-
-![[Pasted image 20240412205515.png]]
-
-
-#### BigQuery 管理員 : 可管理所有 BigQuery 資源與資料
+- 點選API和服務 >建立憑證 > 服務帳戶 > 角色請選(Bigquery管理員)
 - 進入BigQuery > 選專案 > 建立資料集
-
-
-![[Pasted image 20240413193621.png]]
-
-
-![[Pasted image 20240413193608.png]]
-
-
-# Mage.ai 轉入BigQuery,進行查詢
-![[Pasted image 20240416233733.png]]
-
-![[Pasted image 20240418123952.png]]
 
 # Bigquery  (事實表 & 維度表)
 
@@ -187,12 +143,9 @@ Exporter
 | 外鍵    | 通常包含外鍵，用於與維度表關聯 | -                    |
 | 表示的數據 | 事件或事實的數值度量      | 事實表中數據的各種屬性或維度       |
 
-步驟 5 
+# 步驟5 (可參考step_viewer的frame5)
 
 使用 Looker Studio 建立儀錶板 
-![[Frame 5.png]]
-
-
 
 
 # bigquery 權限問題<換帳號就可以開通憑證,解決 error 403>
