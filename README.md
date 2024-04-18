@@ -144,10 +144,12 @@ Mage 面板操作
 | 表示的數據 | 事件或事實的數值度量      | 事實表中數據的各種屬性或維度       |
 
 # 步驟5 (可參考step_viewer的frame5)
+- 使用 Looker Studio 建立儀錶板 
+- 以距離分析票價及常用付款方式
+- 最後建立氣泡地圖,將數據可視化在google map上呈現
 
-使用 Looker Studio 建立儀錶板 
 
-
+# 專案遇到的問題 , 處理方式及解決的心得與新學習到的技術 
 # bigquery 權限問題<換帳號就可以開通憑證,解決 error 403>
 
 https://www.googlecloudcommunity.com/gc/Data-Analytics/Access-Denied-BigQuery-Missing-required-OAuth-scope-Need/td-p/671657
@@ -159,7 +161,7 @@ https://www.googlecloudcommunity.com/gc/Data-Analytics/Access-Denied-BigQuery-Bi
 
 
 
-#2024/1 
+# Mage.ai 使用 GCP Exporter文件
 https://docs.mage.ai/development/blocks/data_exporters/templates#google-bigquery
 
 
