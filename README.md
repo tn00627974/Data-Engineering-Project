@@ -29,7 +29,7 @@ Modern Data Pipeine Tool
 - 取得連結 https://storage.googleapis.com/uber-dataset-0410/uber_data.csv
 # 步驟2 (可參考step_viewer的frame2)
 - 建置GCP Compute Engine VM虛擬機硬碟及配置
-- 作業環境要選 Debian GNU/Linux x86_64 , 可以解決安裝時不用.venv的問題 (解決瘋狂噴錯等問題)
+- 作業環境要選 Debian GNU/Linux 11 x86_64 (bullseye), 可以解決安裝時不用.venv的問題 (解決瘋狂噴錯等問題)
 - - 啟動你的VM虛擬機 (將以下指令複製貼上VM shell裡installing)
 ### 虛擬機 vm 安裝指令
 ```shell
@@ -151,15 +151,51 @@ Mage 面板操作
 
 
 # 專案遇到的問題 , 處理方式及解決的心得與新學習到的技術 
-# bigquery 權限問題<換帳號就可以開通憑證,解決 error 403>
+
+**環境設置和套件安裝**：
+    
+    - 在建置計算引擎 VM 虛擬機時，可能會遇到套件安裝的問題，特別是在虛擬環境（venv）中。若出現「externally-managed-environment」錯誤，可能需要確保使用正確的安裝指令，或者使用 venv 虛擬環境來避免與系統套件的衝突。
+    
+    - 解決方案：按照提供的安裝指令逐步執行，確保環境設置和套件安裝的順利進行。另外，也可以參考相關文檔和社群討論區，尋找其他用戶的解決方案。
+
+**GCP 憑證和權限設置**：
+    
+    - 在使用 BigQuery 和 Google Storage 時可能會遇到權限不足的問題，導致無法建立憑證或執行操作。
+    
+    - 解決方案：確保帳戶有足夠的權限來建立憑證，通常需要具有 BigQuery 管理員角色。若遇到權限問題，可以通過更換帳戶或者重新設置權限來解決。
+
+**ETL 流程設計和實現**：
+    
+    - 處理大量數據時，ETL 流程可能會變得複雜，需要確保每個步驟都能正確執行並保持效率。
+
+    - 解決方案：使用現代資料管道工具（如 Mage.ai）可以簡化 ETL 流程的設計和管理。同時，通過分段處理數據、優化查詢和採用適當的資料結構等方法，可以提高流程的效率和穩定性。
+	
+
+**Mage.Ai轉換**：
+    
+	- 當使用 Mage.ai 進行 Extract 轉換匯入時，遭遇到 403 錯誤：「Access Denied: BigQuery BigQuery: Missing required OAuth scope」。即便採取了多種權限與憑證API設定的嘗試，仍無法成功進行轉換。
+	
+	- 解決方案是，重新使用 GCP BigQuery 舊有專案，重新建置虛擬機器並進行相應的設定，以確保權限和 OAuth 範圍的正確性，從而解決 403 錯誤。
+
+
+**數據可視化和分析**：
+    
+    - 在使用 Looker Studio 建立儀錶板時，可能需要處理大量的數據，並設計合適的可視化方式來呈現分析結果。
+    - 解決方案：在設計儀錶板時，可以根據項目需求和目標觀眾來選擇合適的圖表類型和呈現方式。同時，通過將數據轉化為易於理解的視覺元素，可以幫助用戶更好地理解數據和分析結果。
+
+
+**學習新技術** :
+	- GCP BigQuery
+	- Looker Studio 
+	- Modern Data Pipeine Tool - Magi.AI
+
+# 參考文獻 及 解決文章
 
 https://www.googlecloudcommunity.com/gc/Data-Analytics/Access-Denied-BigQuery-Missing-required-OAuth-scope-Need/td-p/671657
 https://medium.com/google-cloud/how-to-end-user-oauth-for-gcp-1dce8e8ef1a2
 https://www.googlecloudcommunity.com/gc/Data-Analytics/Access-Denied-BigQuery-BigQuery-Missing-required-OAuth-scope/m-p/486175#M885
-
 [# google_auth_oauthlib.interactive 的源碼](https://google-auth-oauthlib.readthedocs.io/en/latest/_modules/google_auth_oauthlib/interactive.html)
 [How to End User OAuth for GCP  如何為 GCP 進行最終用戶 OAuth](https://medium.com/google-cloud/how-to-end-user-oauth-for-gcp-1dce8e8ef1a2)
-
 
 
 # Mage.ai 使用 GCP Exporter文件
