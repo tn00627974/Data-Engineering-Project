@@ -29,8 +29,8 @@ Modern Data Pipeine Tool
 - 取得連結 https://storage.googleapis.com/uber-dataset-0410/uber_data.csv
 # 步驟2 (可參考step_viewer的frame2)
 - 建置GCP Compute Engine VM虛擬機硬碟及配置
-- 作業環境要選 Linux uber--data-engineer-vm 5.10.0-28-cloud-amd64 #1 SMP Debian 5.10.209-2 (2024-01-31) x86_64 不然安裝指令環境會噴錯
-- 啟動你的VM虛擬機 (將以下指令複製貼上VM shell裡installing)
+- 作業環境要選 Debian GNU/Linux x86_64 , 可以解決安裝時不用.venv的問題 (解決瘋狂噴錯等問題)
+- - 啟動你的VM虛擬機 (將以下指令複製貼上VM shell裡installing)
 ### 虛擬機 vm 安裝指令
 ```shell
 # Install Python and pip 
