@@ -2,7 +2,8 @@
  使用ETL data pipeline 將UBER 資料清洗、排程、最後放置在GCP上運行與後續分析專案
  
 
- ![image](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/e10c704b-8c75-4d5e-9c41-b9b2760133e5)
+![image](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/9aaac6d4-5eda-460e-b866-08a5109457e6)
+
 ![image](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/4c5be16f-0d1c-44aa-b6ac-172793e7935d)
 
 
