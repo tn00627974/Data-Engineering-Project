@@ -185,9 +185,9 @@ Mage 面板操作
 
 
 **學習新技術** :
-	- GCP BigQuery
-	- Looker Studio 
-	- Modern Data Pipeine Tool - Magi.AI
+- GCP BigQuery
+- Looker Studio 
+- Modern Data Pipeine Tool - Magi.AI
 
 # 參考文獻 及 解決文章
 
