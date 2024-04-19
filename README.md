@@ -165,21 +165,3 @@ https://www.googlecloudcommunity.com/gc/Data-Analytics/Access-Denied-BigQuery-Bi
 # Mage.ai 使用 GCP Exporter文件
 https://docs.mage.ai/development/blocks/data_exporters/templates#google-bigquery
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-![[Pasted image 20240405203653.png]]
-
-
-
