@@ -1,5 +1,5 @@
 # Data-Engineering-Project
- 使用ETL data pipeline 將UBER 資料清洗、排程、最後放置在GCP上運行與後續分析專案
+ 使用ETL data pipeline 將UBER 資料清洗、排程、最後放置在GCP上運行與後續分析專案,最後以Looker Studio呈現互動表板。
  
 
 ![uber](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/954366a3-a3c5-450b-8d86-c712e8d65432)
