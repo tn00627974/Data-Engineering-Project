@@ -181,7 +181,7 @@ Mage 面板操作
     
 	- 當使用 Mage.ai 進行 Extract 轉換匯入時，遭遇到 403 錯誤：「Access Denied: BigQuery BigQuery: Missing required OAuth scope」。即便採取了多種權限與憑證API設定的嘗試，仍無法成功進行轉換。
 	
-	- 解決方案是，重新使用 GCP BigQuery 舊有專案，重新建置虛擬機器並進行相應的設定，以確保權限和 OAuth 範圍的正確性，從而解決 403 錯誤。
+	- 解決方案：重新使用 GCP BigQuery 舊有專案，重新建置虛擬機器並進行相應的設定，以確保權限和 OAuth 範圍的正確性，從而解決 403 錯誤。
 
 
 **數據可視化和分析**：
