@@ -2,7 +2,7 @@
  使用ETL data pipeline 將UBER 資料清洗、排程、最後放置在GCP上運行與後續分析專案,最後以Looker Studio呈現互動表板。
  
 
-![uber](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/954366a3-a3c5-450b-8d86-c712e8d65432)
+![uber](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/e9eebf15-fe8a-4c8b-a7a3-021ce0259814)
 ![uber_map](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/9465f225-ff23-4d7e-ad3a-49c01cb7b922)
 
 
@@ -151,8 +151,8 @@ Mage 面板操作
 
 # 步驟5 (可參考step_viewer的frame5)
 - 使用 Looker Studio 建立儀錶板 
-- 以距離分析票價及常用付款方式
-- 最後建立氣泡地圖,將數據可視化在google map上呈現
+- 以下拉式選單以(供應商、費率、付款方式、乘客數量)來分析及呈現數量分析表板
+- 建立氣泡地圖,將數據可視化在google map上呈現熱點位置分布
 - https://lookerstudio.google.com/reporting/b1ccee39-8719-4314-9ff4-01b8a9a2a4b4/page/p_mrrofv4hgd 
 
 
