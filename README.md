@@ -1,6 +1,8 @@
 # Data-Engineering-Project
  使用ETL data pipeline 將UBER 資料清洗、排程、最後放置在GCP上運行與後續分析專案,最後以Looker Studio呈現互動表板。
- 
+
+儀錶板連結:
+https://lookerstudio.google.com/reporting/b1ccee39-8719-4314-9ff4-01b8a9a2a4b4/page/p_mrrofv4hgd
 
 ![uber](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/e9eebf15-fe8a-4c8b-a7a3-021ce0259814)
 ![uber_map](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/9465f225-ff23-4d7e-ad3a-49c01cb7b922)
