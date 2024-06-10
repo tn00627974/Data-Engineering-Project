@@ -3,6 +3,8 @@
 
 儀錶板連結:
 https://lookerstudio.google.com/reporting/b1ccee39-8719-4314-9ff4-01b8a9a2a4b4/page/p_mrrofv4hgd
+專案PTT預覽:
+https://gamma.app/docs/Data-Project-yf0adtv9i2tmz17?mode=doc
 
 ![uber](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/e9eebf15-fe8a-4c8b-a7a3-021ce0259814)
 ![uber_map](https://github.com/tn00627974/Data-Engineering-Project/assets/139155210/9465f225-ff23-4d7e-ad3a-49c01cb7b922)
